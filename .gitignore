@@ -1,0 +1,38 @@
+# Frontend (React, Vue, Angular, etc.)
+node_modules/
+build/
+dist/
+.vscode/
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Backend (Node.js + Express)
+node_modules/
+.env
+debug.log
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+*.log
+*.out
+*.err
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
