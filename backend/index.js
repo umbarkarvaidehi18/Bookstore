@@ -8,11 +8,14 @@ dotenv.config();
 connectdb();
 
 const app = express();
-app.use(cors({
-  origin: 'https://bookstore-frontend-mnzn.onrender.com', 
-  
-  credentials: true, 
-}));
+cors({
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "https://bookstore-app-frontend-vhum.onrender.com/",
+  ],
+  credentials: true,
+});
 app.use(express.json());
 app.use("/book", bookroutes);
 app.use("/user", userroutes);
