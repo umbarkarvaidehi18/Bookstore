@@ -12,7 +12,7 @@ cors({
   origin: [
     "http://localhost:5173",
     "http://localhost:5174",
-    "https://bookstore-app-frontend-vhum.onrender.com/",
+    "https://bookstore-frontend-mnzn.onrender.com/",
   ],
   credentials: true,
 });
