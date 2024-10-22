@@ -10,7 +10,7 @@ function Course() {
     const getBook = async () => {
       try {
         const res = await axios.get(
-          "https://bookstore-app-backend-x8xl.onrender.com/book"
+          "https://bookstore-backend-5ail.onrender.com/book"
         );
         console.log(res.data);
         setBook(res.data);
