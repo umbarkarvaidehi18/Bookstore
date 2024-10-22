@@ -13,7 +13,7 @@ function Freebook() {
     const getBook = async () => {
       try {
         const res = await axios.get(
-          "https://bookstore-app-backend-x8xl.onrender.com/book"
+          "https://bookstore-backend-5ail.onrender.com/book"
         );
         const result = res.data.filter((data) => data.category === "Free");
         setBook(result);
