@@ -4,6 +4,7 @@ import Login from "./Login";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast from "react-hot-toast";
+import apiRequest from "../lib/apiRequest";
 
 function Signup() {
   const location = useLocation();
@@ -22,8 +23,8 @@ function Signup() {
       email: data.email,
       password: data.password,
     };
-    await axios
-      .post("https://bookstore-backend-5ail.onrender.com/user/signup", userInfo)
+    await apiRequest
+      .post("/user/signup", userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {

@@ -3,15 +3,14 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Cards from "../components/Cards.jsx";
 import { useState, useEffect } from "react";
+import apiRequest from "../lib/apiRequest.js";
 
 function Course() {
   const [book, setBook] = useState([]);
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get(
-          "https://bookstore-backend-5ail.onrender.com/book"
-        );
+        const res = await apiRequest.get("/book");
         console.log(res.data);
         setBook(res.data);
       } catch (error) {

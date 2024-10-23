@@ -6,15 +6,14 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useState, useEffect } from "react";
 import Cards from "./Cards";
+import apiRequest from "../lib/apiRequest";
 
 function Freebook() {
   const [book, setBook] = useState([]);
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get(
-          "https://bookstore-backend-5ail.onrender.com/book"
-        );
+        const res = await apiRequest.get("/book");
         const result = res.data.filter((data) => data.category === "Free");
         setBook(result);
         console.log(result);
