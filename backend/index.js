@@ -15,7 +15,7 @@ app.use(
       "http://localhost:5174",
       "https://bookstore-frontend-mnzn.onrender.com/",
     ],
-    credentials: true,
+    // credentials: true,
   })
 );
 app.use(express.json());
